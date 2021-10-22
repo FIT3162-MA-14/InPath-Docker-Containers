@@ -1,0 +1,19 @@
+{
+    "name": "kafka-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "plugin.name": "wal2json",
+        "database.hostname": "35.197.140.44",
+        "database.port": "15432",
+        "database.user": "postgres",
+        "database.password": "Chewk@i1",
+        "database.dbname": "discourse",
+        "database.server.name": "pg",
+        "table.include.list": "public.posts, public.users, public.users_stats",
+        "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "key.converter.schemas.enable": "false",
+        "value.converter.schemas.enable": "false",
+        "snapshot.mode": "always"
+    }
+}
